@@ -4,17 +4,17 @@ import axios from 'axios';
 const projectID = '397e5561-8e68-4fcc-ab9a-9fa272b64c42';
 
 const Modal = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
     const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': password };
 
     try {
-      await axios.get('https://api.chatengine.io/chats', { headers: authObject });
+        await axios.get('https://api.chatengine.io/chats', { headers: authObject });
 
       localStorage.setItem('username', username);
       localStorage.setItem('password', password);

@@ -5,6 +5,7 @@ import { sendMessage, isTyping } from 'react-chat-engine';
 const MessageForm = (props) => {
   const [value, setValue] = useState('');
   const { chatId, creds } = props;
+  
 
   const handleChange = (event) => {
     setValue(event.target.value);
